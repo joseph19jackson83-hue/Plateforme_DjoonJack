@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Dashboard de {{ user.username }}</h2>
+<p>Bienvenue ! Vous pouvez maintenant accéder à vos jeux et wallet.</p>
+<ul>
+    <li><a href="{% url 'games' %}"><button>Jouer aux jeux</button></a></li>
+    <li><a href="{% url 'wallet' %}"><button>Voir Wallet</button></a></li>
+</ul>
+{% endblock %}

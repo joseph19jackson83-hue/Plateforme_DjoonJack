@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Jeux 3D interactifs</h2>
+<p>Choisissez un jeu :</p>
+<ul>
+    <li><button id="domino">Domino 3D</button></li>
+    <li><button id="blackjack">Cartes / Blackjack</button></li>
+    <li><button id="machine">Machine visuelle 3D</button></li>
+</ul>
+
+<div id="gameContainer" style="width:100%;height:400px;"></div>
+
+<script>
+document.getElementById('domino').onclick = () => alert('Domino 3D chargé !');
+document.getElementById('blackjack').onclick = () => alert('Blackjack chargé !');
+document.getElementById('machine').onclick = () => alert('Machine 3D chargée !');
+</script>
+{% endblock %}

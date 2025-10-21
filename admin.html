@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Admin Approvals</h2>
+<p>Gérer les utilisateurs, paiements et accès aux jeux :</p>
+<ul>
+    {% for user in users %}
+    <li>{{ user.username }} - {{ user.email }}
+        <button onclick="alert('Utilisateur approuvé')">Approuver</button>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

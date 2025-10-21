@@ -1,0 +1,7 @@
+no pa pa pu la pa la{% extends 'base.html' %}
+{% block content %}
+<h2>Wallet de {{ user.username }}</h2>
+<p>Solde : {{ wallet.balance }} USD</p>
+<button onclick="alert('Ajouter argent via MonCash/NatCash');">Ajouter argent</button>
+<button onclick="alert('Retrait automatique ou manuel activé');">Retirer argent</button>
+{% endblock %}

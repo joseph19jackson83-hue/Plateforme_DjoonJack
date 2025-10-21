@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #FFAA00, #FF0000);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: rgba(0,0,255,0.2);
+    padding: 20px;
+    text-align: center;
+}
+nav a {
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    animation: blink 1s infinite;
+}
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+button {
+    background: orange;
+    border: 2px solid blue;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    animation: blink 1s infinite;
+}

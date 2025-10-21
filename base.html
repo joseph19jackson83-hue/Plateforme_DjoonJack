@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Djoonjack Services</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/games.js' %}" defer></script>
+    <script src="{% static 'libs/three.min.js' %}"></script>
+</head>
+<body>
+    <header>
+        <h1>Djoonjack Services</h1>
+        <nav>
+            <a href="{% url 'home' %}">Accueil</a>
+            <a href="{% url 'games' %}">Jeux</a>
+            <a href="{% url 'wallet' %}">Wallet</a>
+            {% if user.is_authenticated %}
+                <a href="{% url 'dashboard' %}">Dashboard</a>
+                {% if user.is_superuser %}
+                    <a href="{% url 'admin_approve' %}">Admin</a>
+                {% endif %}
+            {% else %}
+                <a href="{% url 'login' %}">Connexion</a>
+                <a href="{% url 'register' %}">Inscription</a>
+            {% endif %}
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
